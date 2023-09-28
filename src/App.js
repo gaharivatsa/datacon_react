@@ -8,31 +8,30 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import dataconlg from './media/datacon2023-high-resolution-logo-color-on-transparent-background.png'
 import { CardsComponent } from "./components/card";
+import { useEffect , useState} from "react";
+import axios from 'axios';
+
 
 export default function CustomAppBar() {
-  const con = [
-    {
-      title: 'Event 1',
-      subtitle: 'Subtitle for Event 1',
-      content: 'Description for Event 1 goes here.',
-    },
-    {
-      title: 'Event 2',
-      subtitle: 'Subtitle for Event 2',
-      content: 'Description for Event 2 goes here.',
-    },
-    {
-      title: 'Event 3',
-      subtitle: 'Subtitle for Event 3',
-      content: 'Description for Event 3 goes here.',
-    },
-    {
-      title: 'Event 4',
-      subtitle: 'Subtitle for Event 4',
-      content: 'Description for Event 4 goes here.',
-    },
-  ];
-  
+  const [con, setCon] = useState([]);
+  useEffect(() => {
+    // Define the API URL
+    const apiUrl = 'https://datacon-one.vercel.app/api/getcontent';
+    // Use Axios to make a GET request
+    axios.get(apiUrl)
+      .then((response) => {
+        // Handle the response data here
+        setCon(response.data)
+        
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+
+
   const scroller = () => {
     const elm = document.getElementById("1");
     if (elm) {
