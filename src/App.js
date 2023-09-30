@@ -19,6 +19,7 @@ import EmailLink from "./components/email";
 import InstagramLink from "./components/insta";
 import MapComponent from "./components/map";
 import dataconlogo from './media/DataKon__2_-removebg-preview.png'
+import bk from './media/low-poly-grid-haikei.svg'
 
 export default function CustomAppBar() {
   const [con, setCon] = useState([]);
@@ -82,7 +83,7 @@ export default function CustomAppBar() {
       </AppBar>
 
       {/* Content div */}
-      <Container maxWidth="false" sx={{ backgroundColor: "blue" }}>
+      <Container maxWidth="false" sx={{ backgroundImage: `url(${bk})`}}>
         <Container
           maxWidth="sm"
           sx={{
