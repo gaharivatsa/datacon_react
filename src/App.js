@@ -119,7 +119,8 @@ export default function CustomAppBar() {
           minHeight: "80vh",
           display: "flex",
           flexDirection: "column",
-          gap:"2rem"
+          gap:"2rem",
+          mb:'3rem'
         }}
       >
         <Typography
