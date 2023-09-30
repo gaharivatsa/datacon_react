@@ -111,26 +111,27 @@ export default function CustomAppBar() {
          <Typography variant="h6" sx = {{color:'white' ,fontSize:'1.2rem',fontWeight:'bold'}}>MAIN EVENT ON OCT 27</Typography>
         </Container>
       </Container>
+      <Container maxWidth = '100%' sx = {{backgroundColor:'black'}}>
       <Container
         maxWidth="lg"
         id="1"
         sx={{
           minHeight: "80vh",
-          backgroundColor: "",
           display: "flex",
           flexDirection: "column",
           gap:"2rem"
         }}
       >
         <Typography
-          variant="h3"
-          sx={{ textAlign: "center", pt: "1rem", pb: "1rem" }}
+          variant="h4"
+          sx={{ textAlign: "center", pt: "1rem", pb: "1rem" ,color:'white'}}
         >
-          Events
+          EVENTS
         </Typography>
         {con.map((events) => (
           <CardsComponent title = {events.title} subtitle = {events.subtitle} content = {events.content}/>
         ) )}
+      </Container>
       </Container>
       <Container maxWidth="lg" sx={{ minHeight: '50vh', display: 'flex', flexDirection: 'column' , gap:'5rem',mt:'5rem',mb:'5rem'}}>
   <Typography variant="h3" sx={{ textAlign: 'center' }}>Organizers</Typography>
