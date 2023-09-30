@@ -10,7 +10,15 @@ import dataconlg from './media/datacon2023-high-resolution-logo-color-on-transpa
 import { CardsComponent } from "./components/card";
 import { useEffect , useState} from "react";
 import axios from 'axios';
-
+import dsbs from './media/dsbs_student-removebg-preview.png'
+import soc from './media/soc-logo.png'
+import srm from './media/srm logo fr.jpeg'
+import srm_logo from './media/srm-logo.png'
+import PhoneMenu from "./components/phone";
+import EmailLink from "./components/email";
+import InstagramLink from "./components/insta";
+import MapComponent from "./components/map";
+import dataconlogo from './media/DataKon__2_-removebg-preview.png'
 
 export default function CustomAppBar() {
   const [con, setCon] = useState([]);
@@ -30,6 +38,16 @@ export default function CustomAppBar() {
       });
   }, []);
 
+  const handleregister = () => {
+    const regist = 'https://forms.gle/7LUDvaukpCfZ6Cht7';
+    const newTab = window.open(regist, '_blank');
+    if (newTab) {
+      newTab.focus();
+    } else {
+     
+      window.location.href = regist;
+    }
+  };
 
 
   const scroller = () => {
@@ -45,21 +63,21 @@ export default function CustomAppBar() {
     <div style = {{margin:0,padding:0,boxSizing:'border-box'}}
     >
       <AppBar
-        sx={{ ml: 0, padding: 0, backgroundColor: "whitesmoke"}}
+        sx={{backgroundColor: "white"}}
         position="relative"
       >
         <Toolbar>
-          <img src= {dataconlg} style = {{height:'1rem',width:'10rem',}}/>
+          <img src= {dataconlogo} style = {{height:'3rem',width:'15rem',position:'absolute',left:-15,top:10}}/>
           
 
           {/* Empty spacer to push buttons to the right */}
           <div style={{ flexGrow: 1 }}></div>
 
           {/* Event and Register buttons on the right */}
-          <Button sx={{ color: "black" }} onClick={scroller}>
+          <Button sx={{ color: "black",fontSize:'0.8rem' }} onClick={scroller}>
             Event
           </Button>
-          <Button  sx={{ color: "black" }}>Register</Button>
+          <Button onClick={handleregister} sx={{ color: "black" ,fontSize:'0.8rem'}}>Register</Button>
         </Toolbar>
       </AppBar>
 
@@ -76,20 +94,20 @@ export default function CustomAppBar() {
             alignItems: "center",
             padding: "16px",
             textAlign: "center",
-            gap:'2rem'
+            gap:'1rem'
 
           }}
         >
           <Typography variant="h4" sx = {{color:'white', fontWeight:'bold'}}>SRM DataKon</Typography>
-          <Typography variant="body1" sx = {{color:'white' , fontFamily : ''}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-            fringilla libero. Vestibulum viverra quam id dui tempus, sit amet
-            <br />
-            blandit ligula venenatis. Sed ut urna non nunc dictum convallis.
-            Maecenas euismod, dolor non luctus blandit, sem libero facilisis
-            libero, vel elementum elit dolor in urna. Sed iaculis odio vel erat
-            blandit, eget tincidunt justo volutpat.
+          <Typography variant="h5" sx = {{color:'white' , fontFamily : ''}}>
+          Where Tech Meets Talent
           </Typography>
+          <Typography variant="h6" sx = {{color:'white' , fontFamily : ''}}>
+          registration starts on : <span style={{fontSize:'1.2rem',fontWeight:'bold'}}>OCT 1</span> 
+          </Typography> 
+          <Typography variant="h6" sx = {{color:'white' , fontFamily : ''}}>
+          registration ends by : <span style={{fontSize:'1.2rem',fontWeight:'bold'}}>OCT 20</span> </Typography>
+         
         </Container>
       </Container>
       <Container
@@ -113,6 +131,41 @@ export default function CustomAppBar() {
           <CardsComponent title = {events.title} subtitle = {events.subtitle} content = {events.content}/>
         ) )}
       </Container>
+      <Container maxWidth="lg" sx={{ minHeight: '50vh', display: 'flex', flexDirection: 'column' , gap:'5rem',mb:'5rem'}}>
+  <Typography variant="h3" sx={{ textAlign: 'center' }}>Organizers</Typography>
+          <Container maxWidth = 'lg' sx = {{display:'flex' , flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
+          <img src={dsbs} style={{ height: '10rem',width:'12rem', margin: '1rem' }}></img>
+    <img src={srm} style={{ height: '10rem',width:'15rem', margin: '1rem' }}></img>
+    <img src={srm_logo} style={{ height: '10rem',width:'12rem', margin: '1rem' }}></img>
+    <img src={soc} style={{ height: '10rem',width:'15rem', margin: '1rem' }}></img>
+          </Container>
+</Container>
+<Container maxWidth = 'lg' sx = {{display: 'flex', flexDirection: 'column',minHeight:'30vh',gap:'2rem'}}>
+          <Typography variant="h3" sx = {{textAlign:'center'}}>
+            Contact Us
+          </Typography>
+          <Container maxWidth = 'lg' sx = {{
+            display:'flex',flexDirection:'row',justifyContent:'center',gap:'3rem',alignItems:'center',flexWrap:'wrap'
+          }}>
+          <PhoneMenu/>
+          <EmailLink/>
+          <InstagramLink/>
+          </Container>
+</Container>
+<Container maxWidth='lg' sx = {{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',minHeight:'30vh',gap:'2rem',marginTop:'3rem'}}>
+<Typography variant="h3" sx = {{textAlign:'center'}}>Venue</Typography>
+<Typography variant="h6">
+SRMIST SRM Nagar, Kattankulathur, Chengalpattu District, Tamil Nadu - 603 203.
+</Typography>
+<Typography variant="h6">
+FARADAY HALL , MECH BLOCK 
+</Typography>
+<MapComponent/>
+</Container>
+<div style= {{backgroundColor:'blue',width:'100%',height:'3rem',
+display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',marginTop:'3rem'}}>
+  <Typography variant="h6" sx = {{color:'white'}}>© SRM DSBS DataKon 2023</Typography>
+</div>
     </div>
   );
 }
