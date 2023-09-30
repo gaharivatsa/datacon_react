@@ -1,5 +1,5 @@
 import React from 'react';
-import MailOutlineTwoToneIcon from '@mui/icons-material/MailOutlineTwoTone';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export default function EmailLink() {
   const email = 'dsc.dsbs.ktr@srmist.edu.in';
@@ -17,7 +17,7 @@ export default function EmailLink() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center',fontSize:'1.3rem' }}>
-      <MailOutlineTwoToneIcon
+      <MailOutlineIcon
         onClick={handleClick}
         style={{ cursor: 'pointer', fontSize: 40 }}
       />
