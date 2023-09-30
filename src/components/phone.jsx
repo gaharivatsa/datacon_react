@@ -31,9 +31,9 @@ export default function PhoneMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        sx={{ fontSize: '1.2rem' }}
+        sx={{ fontSize: '1.5rem' }}
       >
-        📞 Phone
+        📞 
       </Button>
       <Menu
         id="phone-menu"

@@ -20,6 +20,8 @@ import InstagramLink from "./components/insta";
 import MapComponent from "./components/map";
 import dataconlogo from './media/DataKon__2_-removebg-preview.png'
 import bk from './media/low-poly-grid-haikei.svg'
+import contactim from './media/coolHue-5EFCE8-736EFE.png'
+import someim from './media/dragon-scales.svg'
 
 export default function CustomAppBar() {
   const [con, setCon] = useState([]);
@@ -120,7 +122,6 @@ export default function CustomAppBar() {
           display: "flex",
           flexDirection: "column",
           gap:"2rem",
-          mb:'3rem'
         }}
       >
         <Typography
@@ -134,8 +135,21 @@ export default function CustomAppBar() {
         ) )}
       </Container>
       </Container>
-      <Container maxWidth="lg" sx={{ minHeight: '50vh', display: 'flex', flexDirection: 'column' , gap:'5rem',mt:'5rem',mb:'5rem'}}>
-  <Typography variant="h3" sx={{ textAlign: 'center' }}>Organizers</Typography>
+      <Container maxWidth = '100%' sx = {{display: 'flex', flexDirection: 'column',minHeight:'50vh',gap:'2rem',backgroundImage:`url(${someim})`,backgroundRepeat:'no-repeat',backgroundSize:'cover',alignItems:'center',justifyContent:'center'}}>
+          <Typography variant="h4" sx = {{textAlign:'center',color:'white',fontWeight:'bold',textTransform:'uppercase'}}>
+            Contact Us
+          </Typography>
+          <Container maxWidth = 'lg' sx = {{
+            display:'flex',flexDirection:'row',justifyContent:'center',gap:'5rem',alignItems:'center',flexWrap:'wrap'
+          }}>
+          <PhoneMenu/>
+          <EmailLink/>
+          <InstagramLink/>
+          </Container>
+</Container>
+      <Container maxWidth="100%" sx={{ minHeight: '60vh', display: 'flex', flexDirection: 'column' , gap:'5rem',pt:3,pb:3,backgroundImage:`url(${contactim})`,backgroundRepeat:'no-repeat',backgroundSize:'cover'}}>
+
+  <Typography variant="h4" sx={{ textAlign: 'center' ,color:'white',fontWeight:'bold',textTransform:'uppercase'}}>Organizers</Typography>
           <Container maxWidth = 'lg' sx = {{display:'flex' , flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
           <img src={dsbs} style={{ height: '10rem',width:'12rem', margin: '1rem' }}></img>
     <img src={srm} style={{ height: '10rem',width:'15rem', margin: '1rem' }}></img>
@@ -143,20 +157,9 @@ export default function CustomAppBar() {
     <img src={soc} style={{ height: '10rem',width:'15rem', margin: '1rem' }}></img>
           </Container>
 </Container>
-<Container maxWidth = 'lg' sx = {{display: 'flex', flexDirection: 'column',minHeight:'30vh',gap:'2rem'}}>
-          <Typography variant="h3" sx = {{textAlign:'center'}}>
-            Contact Us
-          </Typography>
-          <Container maxWidth = 'lg' sx = {{
-            display:'flex',flexDirection:'row',justifyContent:'center',gap:'3rem',alignItems:'center',flexWrap:'wrap'
-          }}>
-          <PhoneMenu/>
-          <EmailLink/>
-          <InstagramLink/>
-          </Container>
-</Container>
+
 <Container maxWidth='lg' sx = {{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',minHeight:'30vh',gap:'2rem',marginTop:'3rem'}}>
-<Typography variant="h3" sx = {{textAlign:'center'}}>Venue</Typography>
+<Typography variant="h4" sx = {{textAlign:'center',textTransform:'upper',fontWeight:'bold'}}>Venue</Typography>
 <Typography variant="h6">
 SRMIST SRM Nagar, Kattankulathur, Chengalpattu District, Tamil Nadu - 603 203.
 </Typography>
