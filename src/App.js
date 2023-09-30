@@ -107,7 +107,7 @@ export default function CustomAppBar() {
           </Typography> 
           <Typography variant="h6" sx = {{color:'white' , fontFamily : ''}}>
           registration ends by : <span style={{fontSize:'1.2rem',fontWeight:'bold'}}>OCT 20</span> </Typography>
-         
+         <Typography variant="h6" sx = {{color:'white' ,fontSize:'1.2rem',fontWeight:'bold'}}>MAIN EVENT ON OCT 27</Typography>
         </Container>
       </Container>
       <Container
