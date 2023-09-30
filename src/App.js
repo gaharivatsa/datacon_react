@@ -111,7 +111,7 @@ export default function CustomAppBar() {
          <Typography variant="h6" sx = {{color:'white' ,fontSize:'1.2rem',fontWeight:'bold'}}>MAIN EVENT ON OCT 27</Typography>
         </Container>
       </Container>
-      <Container maxWidth = '100%' sx = {{backgroundColor:'black'}}>
+      <Container maxWidth = '100%' sx = {{backgroundColor:'black',pb:'3rem'}}>
       <Container
         maxWidth="lg"
         id="1"

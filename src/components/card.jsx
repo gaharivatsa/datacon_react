@@ -10,7 +10,7 @@ export const CardsComponent = (props) => {
             <Typography variant="h5" component="div" sx ={{color:'white' , fontWeight:'bolder'}}>
               {props.title}
             </Typography>
-            <Typography sx={{ mb: 1,color:'white',fontWeight:'bold' }} variant = 'h6'>
+            <Typography sx={{ mb: 1,mt:1,color:'white',fontWeight:'bold' }} variant = 'h6'>
               {props.subtitle}
             </Typography>
             <Typography variant="body1" sx ={{color:'white'}}>
