@@ -131,7 +131,7 @@ export default function CustomAppBar() {
           <CardsComponent title = {events.title} subtitle = {events.subtitle} content = {events.content}/>
         ) )}
       </Container>
-      <Container maxWidth="lg" sx={{ minHeight: '50vh', display: 'flex', flexDirection: 'column' , gap:'5rem',mb:'5rem'}}>
+      <Container maxWidth="lg" sx={{ minHeight: '50vh', display: 'flex', flexDirection: 'column' , gap:'5rem',mt:'5rem',mb:'5rem'}}>
   <Typography variant="h3" sx={{ textAlign: 'center' }}>Organizers</Typography>
           <Container maxWidth = 'lg' sx = {{display:'flex' , flexDirection:'row',flexWrap:'wrap',justifyContent:'center'}}>
           <img src={dsbs} style={{ height: '10rem',width:'12rem', margin: '1rem' }}></img>

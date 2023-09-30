@@ -6,10 +6,10 @@ export const CardsComponent = (props) => {
     return (
     <Card variant="outlined">
           <CardContent>
-            <Typography variant="h4" component="div">
+            <Typography variant="h5" component="div">
               {props.title}
             </Typography>
-            <Typography sx={{ mb: 1 }} variant = 'h5' color="text.secondary">
+            <Typography sx={{ mb: 1 }} variant = 'h6' color="text.secondary">
               {props.subtitle}
             </Typography>
             <Typography variant="body1">
